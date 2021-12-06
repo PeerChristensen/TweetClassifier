@@ -16,7 +16,7 @@ if __name__ == "__main__":
 
     true_labels = test[config['MODELLING']['target']]
     pred_labels = model.predict(test)
-    pred_probabilities = model.predict_proba(test)
+    #pred_probabilities = model.predict_proba(test)
 
     clf_report_df = round(pd.DataFrame(classification_report(
                 true_labels,

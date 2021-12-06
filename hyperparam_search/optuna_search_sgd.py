@@ -25,7 +25,7 @@ def load_data() -> pd.DataFrame:
 pipeline = Pipeline([
     ('col_selector', ColumnSelector(cols=config['MODELLING']['input'], drop_axis=True)),
     ('vct', TfidfVectorizer()),
-    ("clf", SGDClassifier(loss="log"))
+    ("clf", SGDClassifier())
 ])
 
 
@@ -45,7 +45,7 @@ def objective(trial):
         "vct__max_features": trial.suggest_int("vct__max_features", 50, 50000),
 
         # classifier params
-        #"clf__loss": trial.suggest_categorical("clf__loss", ["hinge", "log"]),
+        "clf__loss": trial.suggest_categorical("clf__loss", ["hinge", "log"]),
         "clf__penalty": trial.suggest_categorical("clf__penalty", ['l2', 'l1', 'elasticnet']),
         "clf__alpha": trial.suggest_float("clf__alpha", 0, 0.01)
     }
