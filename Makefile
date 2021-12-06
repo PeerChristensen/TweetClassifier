@@ -51,6 +51,17 @@ eval_best_nb:
 	python evaluation/nb_evaluation.py
 
 # --------------------------------------------------------------------------------------------
+# TRAIN ON FULL DATASET
+# --------------------------------------------------------------------------------------------
+final_train_pipeline: final_train_sgd final_train_nb
+
+final_train_sgd:
+	python train/train_final_sgd.py
+
+final_train_nb:
+	python train/train_final_nb.py
+
+# --------------------------------------------------------------------------------------------
 # CHECK FEATURES
 # --------------------------------------------------------------------------------------------
 check_features:
