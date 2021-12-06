@@ -4,6 +4,7 @@
 # --------------------------------------------------------------------------------------------
 full_pipeline: data_pipeline optimization_pipeline train_pipeline eval_pipeline
 
+skip_data_pipeline: optimization_pipeline train_pipeline eval_pipeline
 # --------------------------------------------------------------------------------------------
 # PREPARE DATA
 # --------------------------------------------------------------------------------------------

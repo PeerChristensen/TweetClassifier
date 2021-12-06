@@ -6,8 +6,6 @@ from sklearn.naive_bayes import MultinomialNB
 from mlxtend.feature_selection import ColumnSelector
 import pandas as pd
 import optuna
-# from optuna.visualization import plot_slice
-# from optuna.visualization import plot_contour
 from optuna.visualization import plot_optimization_history
 from optuna.visualization import plot_parallel_coordinate
 from optuna.visualization import plot_param_importances
